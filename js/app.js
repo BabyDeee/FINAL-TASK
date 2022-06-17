@@ -21,9 +21,9 @@ function getPosts() {
                                         <h5 class="card-title">${post.title}</h5>
                                         <p class="card-text" id="post-body">${post.body}</p>
                                         <div class="d-flex justify-content-between">
-                                            <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view<i class="bi bi-binoculars-fill ms-1"></i></button>
+                                            <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view</button>
                                             <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                            <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete<i class="bi bi-trash-fill ms-1"></i></button>
+                                            <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
                                         </div>
                                     </div>
                                 </div>
@@ -72,9 +72,9 @@ function addPost(e){
                                 <h5 class="card-title">${post.title}</h5>
                                 <p class="card-text" id="post-body">${post.body}</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view<i class="bi bi-binoculars-fill ms-1"></button>
+                                    <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view</button>
                                     <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                    <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete<i class="bi bi-trash-fill ms-1"></button>
+                                    <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -159,9 +159,9 @@ function deletePost(id) {
                                     <h5 class="card-title">${post.title}</h5>
                                     <p class="card-text" id="post-body">${post.body}</p>
                                     <div class="d-flex justify-content-between">
-                                        <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view<i class="bi bi-binoculars-fill ms-1"></button>
+                                        <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view</button>
                                         <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                        <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete<i class="bi bi-trash-fill ms-1"></button>
+                                        <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
                                     </div>
                                 </div>
                             </div>
