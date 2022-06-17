@@ -39,6 +39,12 @@
     z-index: -1;
 }
 
+.postCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .container .footer{
         text-align: center;

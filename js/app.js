@@ -1,3 +1,4 @@
+alert("Welcome to Dee's Blog! Peace, love and spaghetti!")
 let postRow= document.querySelector('#post-header');
 let postBox = [];
 let postForm = document.querySelector('#body-form');
@@ -10,7 +11,6 @@ function getPosts() {
         .then((response) => response.json())
         .then((data) => {
             postBox = data;
-            getPosts();
                 let postHeader = '';
                 postBox.forEach(post => {
                         postHeader += `
@@ -65,7 +65,7 @@ function addPost(e){
         let postHeader = '';
         postBox.forEach(post => {
             postHeader += `
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 col-12">
                         <div class="card border-0 h-100" style="width: 18rem;">
                             <img src="img/spaghetti.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -96,7 +96,7 @@ function updatePost(id) {
             id: id,
             title: title.value,
             body: body.value,
-            userId: 1,
+            userId: 1
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
