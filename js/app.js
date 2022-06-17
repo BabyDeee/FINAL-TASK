@@ -1,4 +1,4 @@
-alert("Welcome to Dee's Blog! Peace, love and spaghetti!")
+alert("Welcome to Dee's Blog! Peace, love and spaghetti! Buttons might take a few seconds to work :( ")
 let postRow= document.querySelector('#post-header');
 let postBox = [];
 let postForm = document.querySelector('#body-form');
