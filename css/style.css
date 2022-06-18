@@ -32,6 +32,13 @@
 
 }
 
+@media (max-width: 769px){
+    .footer-home ul, .socialLinks ul{
+        margin-left: 0 !important;
+        padding: 0 !important;
+}
+}
+
 /* .postCard{
     margin-left: 50px !important;
 }
