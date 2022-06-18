@@ -32,10 +32,19 @@
 
 }
 
+.postCard{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
 @media (max-width: 769px){
     .footer-home ul, .socialLinks ul{
         margin-left: 0 !important;
         padding: 0 !important;
+}
+.container .footer{
+    text-align: center;
 }
 }
 
