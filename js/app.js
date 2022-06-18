@@ -61,6 +61,7 @@ function addPost(e){
     .then((data) => {
         console.log(data)
         postBox.unshift(data);
+         postForm.reset();
         console.log(postBox)
         let postHeader = '';
         postBox.forEach(post => {

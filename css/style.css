@@ -31,27 +31,21 @@
     background-repeat: no-repeat;
 
 }
-.background{
-    background-image: url('../img/backg.jpg');
-    background-size: cover;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
 
 .postCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 50px !important;
 }
 
-@media (max-width: 768px) {
-    .container .footer{
-        text-align: center;
+@media (max-width: 769px){
+    .postCard{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .footer-home ul, .socialLinks ul{
-        margin-left: 0 !important;
-        padding: 0 !important;
+}
+
+@media(max-width: 320px) and (min-width: 319px ){
+    .postCard{
+        margin-left: 5px !important;
     }
-    
 }

@@ -1,12 +1,19 @@
+.background{
+  background-image: url('../img/backg.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .postCard{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
+  
   @media (max-width: 768px) {
     .postCard{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left: 0 !important;
       }
 }
