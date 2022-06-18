@@ -96,7 +96,7 @@ function updatePost(id) {
             id: id,
             title: title.value,
             body: body.value,
-            userId: 1
+            userId: 1,
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
