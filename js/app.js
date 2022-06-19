@@ -6,7 +6,7 @@ let title = document.querySelector('#post-title');
 let body = document.querySelector('#textarea-part');
 
 
-function getPosts() {
+function hostPosts() {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => response.json())
         .then((data) => {
@@ -21,9 +21,9 @@ function getPosts() {
                                         <h5 class="card-title">${post.title}</h5>
                                         <p class="card-text" id="post-body">${post.body}</p>
                                         <div class="d-flex justify-content-between">
-                                            <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view</button>
-                                            <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                            <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
+                                            <button class="btn btn-secondary" id="view-btn" onclick="viewOne(${post.id})">view</button>
+                                            <button class="btn btn-primary" onclick="changePost(${post.id})">Update</button>
+                                            <button class="btn btn-danger" onclick="removePost(${post.id})">Delete</button>
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@ function getPosts() {
 }
 
 
- getPosts();
+ hostPosts();
 
  
 postForm.addEventListener('submit', addPost)
@@ -59,10 +59,8 @@ function addPost(e){
     })
     .then((response) => response.json())
     .then((data) => {
-        console.log(data)
         postBox.unshift(data);
          postForm.reset();
-        console.log(postBox)
         let postHeader = '';
         postBox.forEach(post => {
             postHeader += `
@@ -73,9 +71,9 @@ function addPost(e){
                                 <h5 class="card-title">${post.title}</h5>
                                 <p class="card-text" id="post-body">${post.body}</p>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view</button>
-                                    <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                    <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
+                                    <button class="btn btn-secondary" id="view-btn" onclick="viewOne(${post.id})">view</button>
+                                    <button class="btn btn-primary" onclick="changePost(${post.id})">Update</button>
+                                    <button class="btn btn-danger" onclick="removePost(${post.id})">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -86,9 +84,8 @@ function addPost(e){
     })
 }
 
-// createPost(e);
 
-function updatePost(id) {
+function changePost(id) {
     console.log(id)
 
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
@@ -106,10 +103,8 @@ function updatePost(id) {
         .then((response) => response.json())
         .then((data) => {
 
-            console.log(data)
             let updateTitles = document.querySelectorAll('#post-title')
             let updateBodies = document.querySelectorAll('#post-body')
-            console.log(updateTitles)
             updateTitles.forEach((updateTitle, index) => {
                 if (index + 1 === id) {
                     if (data.title !== "") {
@@ -141,7 +136,7 @@ function viewOne(id) {
         });
 }
 
-function deletePost(id) {
+function removePost(id) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: 'DELETE',
     })
@@ -149,7 +144,6 @@ function deletePost(id) {
         .then((data) => {
             console.log(data)
             postBox = postBox.filter(post => post.id !== id)
-            console.log(postBox)
             let postHeader = '';
             postBox.forEach(post => {
                     postHeader += `
@@ -160,9 +154,9 @@ function deletePost(id) {
                                     <h5 class="card-title">${post.title}</h5>
                                     <p class="card-text" id="post-body">${post.body}</p>
                                     <div class="d-flex justify-content-between">
-                                        <button class="btn btn-success" id="view-btn" onclick="viewOne(${post.id})">view</button>
-                                        <button class="btn btn-primary" onclick="updatePost(${post.id})">Update</button>
-                                        <button class="btn btn-danger" onclick="deletePost(${post.id})">Delete</button>
+                                        <button class="btn btn-secondary" id="view-btn" onclick="viewOne(${post.id})">view</button>
+                                        <button class="btn btn-primary" onclick="changePost(${post.id})">Update</button>
+                                        <button class="btn btn-danger" onclick="removePost(${post.id})">Delete</button>
                                     </div>
                                 </div>
                             </div>
