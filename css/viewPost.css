@@ -16,4 +16,11 @@
     .postCard{
         margin-left: 0 !important;
       }
+    .footer-home ul, .socialLinks ul{
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+    .container .footer{
+        text-align: center;
+    }
 }
