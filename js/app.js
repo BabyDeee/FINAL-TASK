@@ -15,7 +15,7 @@ function hostPosts() {
                 postBox.forEach(post => {
                         postHeader += `
                             <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="card border-0 h-100" style="width: 18rem;">
+                                <div class="card border-0 mx-auto h-100" style="width: 18rem;">
                                     <img src="img/spaghetti.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">${post.title}</h5>
@@ -65,7 +65,7 @@ function addPost(e){
         postBox.forEach(post => {
             postHeader += `
                 <div class="col-lg-4 col-md-6 mb-4 col-12">
-                        <div class="card border-0 h-100" style="width: 18rem;">
+                        <div class="card border-0 mx-auto" style="width: 18rem;">
                             <img src="img/spaghetti.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">${post.title}</h5>
